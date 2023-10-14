@@ -294,14 +294,14 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     private void addPointOnMap(Mark mark) {
-        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.cat2);
+        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
         PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
         mapObject.setUserData(mark);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(
                         new PointF(0.5f, 1f)).
                 setRotationType(RotationType.NO_ROTATION)
                 .setZIndex(0f)
-                .setScale(1.25f));
+                .setScale(0.65f));
         mapObject.addTapListener(MapFragment.this);
     }
 
@@ -410,12 +410,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             dialog.getWindow().setLayout(width, height);
             dialog.setCancelable(true);
             Mark mark = (Mark) mapObject.getUserData();
-            TextView descTV = dialog.findViewById(R.id.descTV);
-            TextView dateTV = dialog.findViewById(R.id.dateTV);
-            TextView priceTV = dialog.findViewById(R.id.priceTV);
-            TextView eventTV = dialog.findViewById(R.id.eventTV);
             TextView aboutTV = dialog.findViewById(R.id.aboutTV);
-            ImageView mainPhotoIV = dialog.findViewById(R.id.mainPhotoIV);
 
             aboutTV.setOnClickListener(view -> {
                 Bundle bundle = new Bundle();

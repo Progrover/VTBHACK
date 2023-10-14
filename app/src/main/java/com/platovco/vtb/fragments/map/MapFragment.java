@@ -42,6 +42,7 @@ import com.platovco.vtb.models.Mark;
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKit;
 import com.yandex.mapkit.MapKitFactory;
+import com.yandex.mapkit.ScreenPoint;
 import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.location.FilteringMode;
 import com.yandex.mapkit.location.Location;
@@ -58,6 +59,7 @@ import com.yandex.mapkit.map.IconStyle;
 import com.yandex.mapkit.map.Map;
 import com.yandex.mapkit.map.MapObject;
 import com.yandex.mapkit.map.MapObjectTapListener;
+import com.yandex.mapkit.map.MapWindow;
 import com.yandex.mapkit.map.PlacemarkMapObject;
 import com.yandex.mapkit.map.RotationType;
 import com.yandex.mapkit.mapview.MapView;
@@ -74,19 +76,17 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     private MapView mapView;
     private ImageView zoomPlusBTN;
     private ImageView zoomMinusBTN;
+    private MapWindow mapWindow;
 
     private ImageView locationBTN;
     final CameraListener listener = new CameraListener() {
         @Override
         public void onCameraPositionChanged(@NonNull Map map, @NonNull CameraPosition cameraPosition, @NonNull CameraUpdateReason cameraUpdateReason, boolean finished) {
-//            mViewModel.cameraPositionLD.setValue(cameraPosition);
-//            if (finished) {
-//                AppwriteManager.INSTANCE.getMarksInZone(mViewModel.marks, mapWindow.screenToWorld(new ScreenPoint(0, 0)), mapWindow.screenToWorld(new ScreenPoint(
-//                        mapWindow.width(), mapWindow.height())), AppwriteManager.INSTANCE.getContinuation((result, throwable) -> {
-//                    Log.d("AppW Result: ", String.valueOf(result));
-//                    Log.d("AppW Exception: ", String.valueOf(throwable));
-//                }));
-//            }
+            mViewModel.cameraPositionLD.setValue(cameraPosition);
+            if (finished) {
+                mViewModel.getMarksInZone(mapWindow.screenToWorld(new ScreenPoint(0, 0)), mapWindow.screenToWorld(new ScreenPoint(
+                        mapWindow.width(), mapWindow.height())));
+            }
         }
     };
     private ActivityResultLauncher<String> requestPermissionLauncher;
@@ -274,8 +274,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         locationBTN = rootView.findViewById(R.id.locationBTN);
         loadingLL = rootView.findViewById(R.id.loadingLL);
         fusedLocationClientHuawei = com.huawei.hms.location.LocationServices.getFusedLocationProviderClient(getContext());
-
-
+        mapWindow = mapView.getMapWindow();
         requestPermissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 result -> {
@@ -295,7 +294,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     private void addPointOnMap(Mark mark) {
-        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
+        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.cat2);
         PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
         mapObject.setUserData(mark);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(

@@ -16,4 +16,5 @@ public class MapViewModel extends ViewModel {
     public MutableLiveData<Boolean> visibilityOfLoadingLD = new MutableLiveData<>(false);
     public MutableLiveData<Bundle> filters = new MutableLiveData<>();
     public MutableLiveData<CameraPosition> cameraPositionLD = new MutableLiveData<>();
+
 }

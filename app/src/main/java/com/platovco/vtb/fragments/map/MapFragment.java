@@ -239,7 +239,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     private void initUserLocation() {
         MapKit mapKit = MapKitFactory.getInstance();
         ImageProvider imageProvider = ImageProvider.fromResource(
-                getActivity(), R.drawable.user_posititon_icon);
+                getActivity(), R.drawable.user_location_icon);
         userLocationPlacemark = mapView.getMap().getMapObjects().addPlacemark(new Point(startLat, startLon));
         userLocationPlacemark.setIcon(imageProvider, new IconStyle().setAnchor(
                         new PointF(0.5f, 0.8f)).
@@ -295,7 +295,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     private void addPointOnMap(Mark mark) {
-        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.cat2);
+        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
         PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
         mapObject.setUserData(mark);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(

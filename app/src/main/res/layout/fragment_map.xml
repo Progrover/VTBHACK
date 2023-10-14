@@ -69,15 +69,15 @@
 
             <ImageView
                 android:id="@+id/zoomPlusBTN"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginBottom="15dp"
                 android:src="@drawable/zoom_in" />
 
             <ImageView
                 android:id="@+id/zoomMinusBTN"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginBottom="80dp"
                 android:src="@drawable/zoom_out" />
 
@@ -88,20 +88,20 @@
 
                 <ImageView
                     android:id="@+id/locationBTN"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/location_icon" />
 
                 <FrameLayout
                     android:id="@+id/location_progress"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:visibility="gone">
 
                     <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@drawable/empty_location_icon" />
 
                     <ProgressBar

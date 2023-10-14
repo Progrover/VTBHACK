@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Цимлянская ул. 24, стр. 2"
+                tools:hint="Цимлянская ул. 24, стр. 2"
                 android:textSize="22dp" />
 
             <LinearLayout
@@ -89,6 +89,7 @@
                     android:stepSize="0.5"
                     android:numStars="5"
                     android:layout_marginRight="5dp"
+                    android:rating="3.0"
                     />
 
                 <TextView
@@ -96,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:hint="4.0"
+                    tools:hint="4.0"
                     android:textSize="20dp" />
 
                 <TextView
@@ -105,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
-                    android:hint="(500 оценок)"
+                    tools:hint="(500 оценок)"
                     android:textSize="17dp" />
             </LinearLayout>
 

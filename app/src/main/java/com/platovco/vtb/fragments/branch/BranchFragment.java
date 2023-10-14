@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.platovco.vtb.R;
 
+
 public class BranchFragment extends Fragment {
 
     private BranchViewModel mViewModel;

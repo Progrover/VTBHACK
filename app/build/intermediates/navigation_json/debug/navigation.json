@@ -1,0 +1,25 @@
+[
+  {
+    "name": "global_graph",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "map_graph",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  },
+  {
+    "name": "nav_graph",
+    "navigationXmlIds": [
+      "map_graph",
+      "recomendations_graph"
+    ],
+    "deepLinks": []
+  },
+  {
+    "name": "recomendations_graph",
+    "navigationXmlIds": [],
+    "deepLinks": []
+  }
+]

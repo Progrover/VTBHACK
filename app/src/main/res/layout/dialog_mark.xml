@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:ellipsize="end"
@@ -45,6 +44,47 @@
             android:text="Адрес"
             android:textColor="@color/black"
             android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ratingLL"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <per.wsj.library.AndRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:isIndicator="true"
+                app:starColor="@color/light_blue"
+                app:subStarColor="@color/lightGrey"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:layout_marginRight="5dp"
+                android:rating="3.0"
+                />
+
+            <TextView
+                android:id="@+id/ratingNumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="4.0"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/marksCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="(500)"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

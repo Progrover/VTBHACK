@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.branch.BranchFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/basicLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/bestStrokeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="Оптимальные"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp">
+
+            <com.angcyo.tablayout.DslTabLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:tab_indicator_drawable="@color/light_blue"
+                app:tab_enable_text_color="true"
+                app:tab_item_auto_equ_width="true"
+                app:tab_indicator_style="STYLE_CENTER"
+                app:tab_indicator_anim="true"
+                app:tab_indicator_radius="@dimen/cardview_default_radius"
+                app:tab_indicator_content_index="@integer/material_motion_duration_medium_1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отделения"
+                    android:paddingVertical="15dp"
+                    android:textSize="20dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Банкоматы"
+                    android:textSize="20dp"
+                    android:paddingVertical="15dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black" />
+            </com.angcyo.tablayout.DslTabLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/branches_or_bankomatsStrokeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Отделения"
+                android:textColorHint="@color/black"
+                android:textSize="22dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/marksRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/marks_item"/>
+</LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

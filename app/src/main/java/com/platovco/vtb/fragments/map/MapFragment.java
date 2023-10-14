@@ -37,8 +37,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.platovco.vtb.R;
+import com.platovco.vtb.models.MarkBranch;
 import com.platovco.vtb.models.CustomPoint;
-import com.platovco.vtb.models.Mark;
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKit;
 import com.yandex.mapkit.MapKitFactory;
@@ -66,6 +66,7 @@ import com.yandex.mapkit.mapview.MapView;
 import com.yandex.runtime.image.ImageProvider;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
@@ -293,10 +294,10 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         );
     }
 
-    private void addPointOnMap(Mark mark) {
+    private void addPointOnMap(MarkBranch markBranch) {
         ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
-        PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
-        mapObject.setUserData(mark);
+        PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(markBranch.getLatitude(), markBranch.getLongitude()));
+        mapObject.setUserData(markBranch);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(
                         new PointF(0.5f, 1f)).
                 setRotationType(RotationType.NO_ROTATION)
@@ -335,9 +336,9 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         mViewModel.marks.observe(getViewLifecycleOwner(), this::drawPointsOnMap);
 
         getParentFragmentManager().setFragmentResultListener("markKey", getViewLifecycleOwner(), (requestKey, result) -> {
-            Mark mark = (Mark) result.getSerializable("mark");
+            MarkBranch markBranch = (MarkBranch) result.getSerializable("markBranch");
             mapView.getMap().move(
-                    new CameraPosition(new Point(mark.getLatitude(), mark.getLongitude()), 18f, 0.0f, 0.0f),
+                    new CameraPosition(new Point(markBranch.getLatitude(), markBranch.getLongitude()), 18f, 0.0f, 0.0f),
                     new Animation(Animation.Type.SMOOTH, (float) 0.8),
                     null);
         });
@@ -356,10 +357,10 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     @SuppressWarnings("unchecked")
-    private void drawPointsOnMap(ArrayList<Mark> marks) {
+    private void drawPointsOnMap(List<MarkBranch> markBranches) {
         clusterizedCollection.clear();
-        for (Mark mark : marks) {
-            addPointOnMap(mark);
+        for (MarkBranch markBranch : markBranches) {
+            addPointOnMap(markBranch);
         }
         clusterizedCollection.clusterPlacemarks(70, 20);
     }
@@ -409,17 +410,17 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
             dialog.getWindow().setLayout(width, height);
             dialog.setCancelable(true);
-            Mark mark = (Mark) mapObject.getUserData();
+            MarkBranch markBranch = (MarkBranch) mapObject.getUserData();
             TextView aboutTV = dialog.findViewById(R.id.aboutTV);
 
             aboutTV.setOnClickListener(view -> {
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("mark", mark);
+                bundle.putSerializable("markBranch", markBranch);
                 dialog.cancel();
                 //Navigation.findNavController(getActivity(), R.id.host_fragment).navigate(R.id.eventInformationFragment, bundle);
             });
 
-            if (mark != null) {
+            if (markBranch != null) {
 
             }
             if (getActivity() != null && !getActivity().isFinishing()) {

@@ -1,9 +1,11 @@
 package com.platovco.vtb.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class HourlyLoad {
-    private Long id;
-    private Long hour;
-    private Long load;
+    @JsonProperty("id") private Long id;
+    @JsonProperty("hour") private Long hour;
+    @JsonProperty("load") private Long load;
 
     public HourlyLoad() {
     }

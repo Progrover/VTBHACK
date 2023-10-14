@@ -15,9 +15,7 @@ import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.map.CameraPosition;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import okhttp3.ResponseBody;
@@ -29,12 +27,12 @@ public class MapViewModel extends ViewModel implements ConnectionService {
     public MutableLiveData<Bundle> filters = new MutableLiveData<>();
     public MutableLiveData<CameraPosition> cameraPositionLD = new MutableLiveData<>();
 
-    public void getMarksInZone(Point topLeftPoint, Point bottomRightPoint) {
+    public void getMarksInZone(Point topRightPoint, Point bottomLeftPoint) {
         var requestData = new BranchFindInRangeRequest(
-                topLeftPoint.getLatitude(),
-                topLeftPoint.getLongitude(),
-                bottomRightPoint.getLatitude(),
-                bottomRightPoint.getLongitude());
+                bottomLeftPoint.getLatitude(),
+                topRightPoint.getLongitude(),
+                topRightPoint.getLatitude(),
+                bottomLeftPoint.getLongitude());
         var request = buildRequest("branch/find-in-range", requestData);
         runAsync(() -> sendRequest(request, this::onMarksInZoneReceived));
     }

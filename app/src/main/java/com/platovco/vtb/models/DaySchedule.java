@@ -1,12 +1,14 @@
 package com.platovco.vtb.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class DaySchedule {
-    private Long id;
-    private String hours;
-    private Boolean works;
-    private List<HourlyLoad> hourlyLoads;
+    @JsonProperty("id") private Long id;
+    @JsonProperty("hours") private String hours;
+    @JsonProperty("works") private Boolean works;
+    @JsonProperty("hourlyLoads") private List<HourlyLoad> hourlyLoads;
 
     public DaySchedule() {
     }

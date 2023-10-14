@@ -1,5 +1,7 @@
 package com.platovco.vtb.web;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import org.json.JSONException;
@@ -65,6 +67,7 @@ public interface ConnectionService  {
                     try {
                         onResponse.accept(response.code(), responseBody);
                     } catch (JSONException | IOException e) {
+                        Log.i("connection: ", "onResponse: " + "fail");
                     }
                 }
                 Arrays.stream(onFinished).forEach(Runnable::run);

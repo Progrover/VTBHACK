@@ -1,19 +1,21 @@
 package com.platovco.vtb.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.DayOfWeek;
 import java.util.Objects;
 import java.util.SortedMap;
 
 public class Branch {
-    private Long id;
-    private String name;
-    private String address;
-    private SortedMap<DayOfWeek, DaySchedule> dailyLoad;
-    private Double grade;
-    private Long amountOfReviews;
-    private Long load;
-    private Double x;
-    private Double y;
+    @JsonProperty("id") private Long id;
+    @JsonProperty("name") private String name;
+    @JsonProperty("address") private String address;
+    @JsonProperty("dailyLoad") private SortedMap<DayOfWeek, DaySchedule> dailyLoad;
+    @JsonProperty("grade") private Double grade;
+    @JsonProperty("amountOfReviews") private Long amountOfReviews;
+    @JsonProperty("load") private Long load;
+    @JsonProperty("x") private Double x;
+    @JsonProperty("y") private Double y;
 
     public Branch() {
     }

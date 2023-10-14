@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/xml_data_extraction_rules.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/navigation_global_graph.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/navigation/global_graph.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_zoom_out.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/zoom_out.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_map_pin.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/map_pin.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_img.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/img.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_vtb_icon.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/vtb_icon.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_toolbar_background.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/toolbar_background.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_location_icon.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/location_icon.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_empty_location_icon.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/empty_location_icon.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_bottom_navigation_item_background_colors.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/bottom_navigation_item_background_colors.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_activity_main.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_fragment_point_list.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/fragment_point_list.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_user_posititon_icon.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/user_posititon_icon.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_button_background.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/button_background.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_fragment_branch.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/fragment_branch.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_bottom_navigation_background.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/bottom_navigation_background.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_zoom_in.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/zoom_in.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_fragment_bankomat.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/fragment_bankomat.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_fragment_map.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/fragment_map.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_map_button_empty.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/map_button_empty.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/navigation_nav_graph.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_fragment_main.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_ic_list.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/ic_list.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/layout_dialog_mark.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/layout/dialog_mark.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_ic_map.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/ic_map.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_user_location_icon.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/user_location_icon.png"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.platovco.vtb.app-main-73:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/navigation_map_graph.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/navigation/map_graph.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/xml_backup_rules.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/menu_bottom_menu.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/menu/bottom_menu.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/navigation_recomendations_graph.xml.flat",
+        "source": "com.platovco.vtb.app-main-73:/navigation/recomendations_graph.xml"
+    },
+    {
+        "merged": "com.platovco.vtb.app-merged_res-71:/drawable_cat2.png.flat",
+        "source": "com.platovco.vtb.app-main-73:/drawable/cat2.png"
+    }
+]

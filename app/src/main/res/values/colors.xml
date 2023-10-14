@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="transparent">#00FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#1C1C1C</color>
+    <color name="colorPrimaryDark">#1E1E1E</color>
+
+    <color name="darkGrey">#1D1D1D</color>
+    <color name="darkGrey2">#131313</color>
+
+    <color name="lightGrey">#787878</color>
+    <color name="warning">#E96A5A</color>
+
+
+    <color name="ted_image_picker_primary">@color/colorAccent</color>
+    <color name="ted_image_picker_primary_pressed">@color/darkRed</color>
+
+    <color name="colorAccent">#ff3145</color>
+    <color name="darkRed">#870115</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#818694</color>
+
+    <color name="BarColor">#131313</color>
+    <color name="WhiteText">#C0BFBF</color>
+    <color name="DarkBlue">#010850</color>
+    <color name="DarkRed">#490101</color>
+    <color name="pink">#FFEE1656</color>
+    <color name="ThemeGrey">#191919</color>
+    <color name="white">#F5EFEF</color>
+    <color name="secondaryText">#E8E8E8</color>
+    <color name="titleText">#CDCDCD</color>
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#ff3445</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+    <color name="red">#D80512</color>
+    <color name="separator">#353333</color>
+    <color name="card_background">#282829</color>
 </resources>

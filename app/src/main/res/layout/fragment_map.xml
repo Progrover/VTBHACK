@@ -1,14 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#439044"
+    android:orientation="vertical"
+    android:theme="@android:style/ThemeOverlay.Material.Dark"
     tools:context=".fragments.map.MapFragment">
 
-    <TextView
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/cat2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/separator" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yandex.mapkit.mapview.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/zoomPlusBTN"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/zoom_in" />
+
+            <ImageView
+                android:id="@+id/zoomMinusBTN"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="80dp"
+                android:src="@drawable/zoom_out" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:id="@+id/locationBTN"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/location_icon" />
+
+                <FrameLayout
+                    android:id="@+id/location_progress"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/empty_location_icon" />
+
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp" />
+                </FrameLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loadingLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Определяем вашу геопозицию..."
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

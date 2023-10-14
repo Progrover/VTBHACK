@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search_graph"
+        android:id="@+id/map_graph"
         android:icon="@drawable/ic_map"
         android:title="Карта"
         app:itemIconSize="30dp" />
     <item
-        android:id="@+id/likes_graph"
+        android:id="@+id/recomendations_graph"
         android:icon="@drawable/ic_list"
         android:title="Список"
         app:itemIconSize="20dp"/>

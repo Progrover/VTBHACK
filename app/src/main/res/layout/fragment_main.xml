@@ -19,17 +19,11 @@
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:background="@drawable/bottom_navigation_background"
         app:itemActiveIndicatorStyle="@null"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_menu" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
 
 </FrameLayout>

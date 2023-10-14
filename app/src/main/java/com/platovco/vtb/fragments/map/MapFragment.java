@@ -117,7 +117,6 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         initListeners();
         initUserLocation();
         moveMap(false);
-        mapView.getMap().setNightModeEnabled(true);
         mapView.getMap().setRotateGesturesEnabled(false);
         return rootView;
 

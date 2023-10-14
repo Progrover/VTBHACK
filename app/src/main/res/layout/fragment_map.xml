@@ -113,6 +113,33 @@
 
             </FrameLayout>
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/selectRouteLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/autoSelectBTN"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/auto_off_btn" />
+
+            <ImageView
+                android:id="@+id/pedestrianSelectBTN"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/pedestrian_on_btn" />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/loadingLL"

@@ -42,6 +42,7 @@ import com.platovco.vtb.models.Mark;
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKit;
 import com.yandex.mapkit.MapKitFactory;
+import com.yandex.mapkit.ScreenPoint;
 import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.location.FilteringMode;
 import com.yandex.mapkit.location.Location;
@@ -58,6 +59,7 @@ import com.yandex.mapkit.map.IconStyle;
 import com.yandex.mapkit.map.Map;
 import com.yandex.mapkit.map.MapObject;
 import com.yandex.mapkit.map.MapObjectTapListener;
+import com.yandex.mapkit.map.MapWindow;
 import com.yandex.mapkit.map.PlacemarkMapObject;
 import com.yandex.mapkit.map.RotationType;
 import com.yandex.mapkit.mapview.MapView;
@@ -74,19 +76,17 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     private MapView mapView;
     private ImageView zoomPlusBTN;
     private ImageView zoomMinusBTN;
+    private MapWindow mapWindow;
 
     private ImageView locationBTN;
     final CameraListener listener = new CameraListener() {
         @Override
         public void onCameraPositionChanged(@NonNull Map map, @NonNull CameraPosition cameraPosition, @NonNull CameraUpdateReason cameraUpdateReason, boolean finished) {
-//            mViewModel.cameraPositionLD.setValue(cameraPosition);
-//            if (finished) {
-//                AppwriteManager.INSTANCE.getMarksInZone(mViewModel.marks, mapWindow.screenToWorld(new ScreenPoint(0, 0)), mapWindow.screenToWorld(new ScreenPoint(
-//                        mapWindow.width(), mapWindow.height())), AppwriteManager.INSTANCE.getContinuation((result, throwable) -> {
-//                    Log.d("AppW Result: ", String.valueOf(result));
-//                    Log.d("AppW Exception: ", String.valueOf(throwable));
-//                }));
-//            }
+            mViewModel.cameraPositionLD.setValue(cameraPosition);
+            if (finished) {
+                mViewModel.getMarksInZone(mapWindow.screenToWorld(new ScreenPoint(0, 0)), mapWindow.screenToWorld(new ScreenPoint(
+                        mapWindow.width(), mapWindow.height())));
+            }
         }
     };
     private ActivityResultLauncher<String> requestPermissionLauncher;
@@ -274,8 +274,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         locationBTN = rootView.findViewById(R.id.locationBTN);
         loadingLL = rootView.findViewById(R.id.loadingLL);
         fusedLocationClientHuawei = com.huawei.hms.location.LocationServices.getFusedLocationProviderClient(getContext());
-
-
+        mapWindow = mapView.getMapWindow();
         requestPermissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 result -> {
@@ -302,7 +301,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
                         new PointF(0.5f, 1f)).
                 setRotationType(RotationType.NO_ROTATION)
                 .setZIndex(0f)
-                .setScale(1.25f));
+                .setScale(0.65f));
         mapObject.addTapListener(MapFragment.this);
     }
 
@@ -411,12 +410,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             dialog.getWindow().setLayout(width, height);
             dialog.setCancelable(true);
             Mark mark = (Mark) mapObject.getUserData();
-            TextView descTV = dialog.findViewById(R.id.descTV);
-            TextView dateTV = dialog.findViewById(R.id.dateTV);
-            TextView priceTV = dialog.findViewById(R.id.priceTV);
-            TextView eventTV = dialog.findViewById(R.id.eventTV);
             TextView aboutTV = dialog.findViewById(R.id.aboutTV);
-            ImageView mainPhotoIV = dialog.findViewById(R.id.mainPhotoIV);
 
             aboutTV.setOnClickListener(view -> {
                 Bundle bundle = new Bundle();

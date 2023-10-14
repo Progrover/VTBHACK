@@ -18,6 +18,12 @@ public class Mark implements Serializable {
         this.pinUrl = (String) mapOfMark.get("pinUrl");
     }
 
+    public Mark(Double longitude, Double latitude, String uuid) {
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.uuid = uuid;
+    }
+
     public Mark() {}
 
     public Double getLongitude() {

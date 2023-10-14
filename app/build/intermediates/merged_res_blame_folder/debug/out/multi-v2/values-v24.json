@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.platovco.vtb.app-mergeDebugResources-69:/values-v24/values-v24.xml",
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-71:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\734e7a862327bdfec7e9c9c29977b5c6\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\30579772b053ee1d7c51c1fe995bcbbe\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\2160829399639caa84fb5b0435e61d2c\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\34f92321bd6f6521c7678f34be61a401\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\cf7f860d2cba0a38bb0229b2ba6ec194\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\ad4e8ba96414feb483f8cc0d50a74e6c\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

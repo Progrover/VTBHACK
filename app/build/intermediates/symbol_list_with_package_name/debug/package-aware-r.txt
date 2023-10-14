@@ -172,6 +172,8 @@ attr behavior_overlapTop
 attr behavior_peekHeight
 attr behavior_saveFlags
 attr behavior_skipCollapsed
+attr bgColor
+attr bgDrawable
 attr blendSrc
 attr borderRound
 attr borderRoundPercent
@@ -631,6 +633,7 @@ attr itemTextAppearanceActive
 attr itemTextAppearanceInactive
 attr itemTextColor
 attr itemVerticalPadding
+attr keepOriginColor
 attr keyPositionType
 attr keyboardIcon
 attr keylines
@@ -931,12 +934,14 @@ attr region_widthMoreThan
 attr renderDebug
 attr restoreState
 attr reverseLayout
+attr right2Left
 attr rippleColor
 attr rotationCenterId
 attr round
 attr roundPercent
 attr route
 attr saturation
+attr scaleFactor
 attr scaleFromTextSize
 attr scopeUris
 attr scrimAnimationDuration
@@ -993,8 +998,25 @@ attr springMass
 attr springStiffness
 attr springStopThreshold
 attr srcCompat
+attr ss_animationDuration
+attr ss_animationType
+attr ss_iconPadding
+attr ss_iconSize
+attr ss_leftIcon
+attr ss_leftText
+attr ss_rightIcon
+attr ss_rightText
+attr ss_selectedTextSize
+attr ss_sliderBackgroundColor
+attr ss_switchColor
+attr ss_textColor
+attr ss_textSize
+attr ss_textVisibility
 attr stackFromEnd
 attr staggered
+attr starColor
+attr starDrawable
+attr starSpacing
 attr startDestination
 attr startIconCheckable
 attr startIconContentDescription
@@ -1013,6 +1035,7 @@ attr statusBarScrim
 attr strokeColor
 attr strokeWidth
 attr subMenuArrow
+attr subStarColor
 attr subheaderColor
 attr subheaderInsetEnd
 attr subheaderInsetStart
@@ -1355,6 +1378,7 @@ color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color lightGrey
+color light_blue
 color loginBkColor
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -2553,6 +2577,7 @@ drawable avd_show_password
 drawable back_arrow
 drawable bottom_navigation_background
 drawable bottom_navigation_item_background_colors
+drawable branches_stroke
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2561,6 +2586,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_background
 drawable cat2
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -2603,6 +2629,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_rating_star_border
+drawable ic_rating_star_solid
 drawable img
 drawable location_icon
 drawable m3_appbar_background
@@ -2614,6 +2642,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable map_button_empty
+drawable map_pin
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2652,6 +2681,7 @@ drawable test_level_drawable
 drawable toolbar_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable user_location_icon
 drawable user_posititon_icon
 drawable vtb_icon
 drawable yandex_logo_en
@@ -2736,6 +2766,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addressTV
 id adjust_height
 id adjust_width
 id adressTV
@@ -2757,6 +2788,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_arrow
 id bankomatFragment
 id barrier
 id baseline
@@ -2764,6 +2796,7 @@ id basicLL
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id bestStrokeTV
 id blocking
 id bottom
 id bounce
@@ -2772,6 +2805,7 @@ id bounceEnd
 id bounceStart
 id branchFragment
 id branchPhotoIV
+id branches_or_bankomatsStrokeTV
 id buildWayTV
 id buttonPanel
 id cache_measures
@@ -2787,6 +2821,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatTV
 id checkbox
 id checked
 id chip
@@ -2806,6 +2841,8 @@ id compose_view_saveable_id_tag
 id compress
 id confirm_button
 id constraint
+id contactStrokeTV
+id contactsLL
 id container
 id content
 id contentPanel
@@ -2815,11 +2852,11 @@ id coordinator
 id cos
 id counterclockwise
 id currentState
+id curved
 id custom
 id customPanel
 id cut
 id dark
-id dateTV
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2827,7 +2864,6 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
-id descTV
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2842,6 +2878,8 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id distanceAndMarkLL
+id distanceTV
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2867,7 +2905,6 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id eventTV
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2923,6 +2960,7 @@ id installation_progress
 id invisible
 id inward
 id italic
+id itemLay
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2932,6 +2970,7 @@ id left
 id leftToRight
 id legacy
 id light
+id line
 id line1
 id line3
 id linear
@@ -2948,6 +2987,11 @@ id mainPhotoIV
 id mapFragment
 id map_graph
 id mapview
+id markDataLL
+id markImageTV
+id markTV
+id marksCountTV
+id marksRV
 id masked
 id match_constraint
 id match_parent
@@ -2981,6 +3025,8 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id moreInfoCV
+id moreTV
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3044,11 +3090,13 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phone1TV
+id phone2TV
+id phone3TV
 id pin
 id pointListFragment
 id position
 id postLayout
-id priceTV
 id progress_action
 id progress_circular
 id progress_horizontal
@@ -3092,6 +3140,15 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id services1TV
+id services2TV
+id services3TV
+id services4TV
+id services5TV
+id services6TV
+id services7TV
+id servicesLL
+id servicesStrokeTV
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3189,7 +3246,6 @@ id unlabeled
 id up
 id upSideBarLL
 id useLogo
-id usersCountTV
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3335,6 +3391,7 @@ layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
 layout m3_auto_complete_simple_item
+layout marks_item
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3598,6 +3655,7 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -4206,7 +4264,6 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_PlayCore_Transparent
-style Theme_VTB
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -4655,6 +4712,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style blueBar
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -4665,6 +4723,7 @@ styleable ActivityFilter activityAction activityName
 styleable ActivityNavigator android_name action data dataPattern targetPackage
 styleable ActivityRule alwaysExpand
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
+styleable AndRatingBar bgColor bgDrawable keepOriginColor right2Left scaleFactor starColor starDrawable starSpacing subStarColor
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
 styleable AnimatedStateListDrawableTransition android_drawable android_toId android_fromId android_reversible
@@ -4807,6 +4866,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable StickySwitch ss_animationDuration ss_animationType ss_iconPadding ss_iconSize ss_leftIcon ss_leftText ss_rightIcon ss_rightText ss_selectedTextSize ss_sliderBackgroundColor ss_switchColor ss_textColor ss_textSize ss_textVisibility
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

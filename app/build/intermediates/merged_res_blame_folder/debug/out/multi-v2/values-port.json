@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.platovco.vtb.app-mergeDebugResources-69:/values-port/values-port.xml",
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-71:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\734e7a862327bdfec7e9c9c29977b5c6\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\30579772b053ee1d7c51c1fe995bcbbe\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

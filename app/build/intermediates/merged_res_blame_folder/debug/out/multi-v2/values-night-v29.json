@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.platovco.vtb.app-mergeDebugResources-69:/values-night-v29/values-night-v29.xml",
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-71:/values-night-v29/values-night-v29.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\7a492f51f0e09e853052fba2eba72eb4\\transformed\\ui-6.5.0.300\\res\\values-night-v29\\values-night-v29.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\7cac8926a8ecee86ee9fea3fcd9c5781\\transformed\\ui-6.5.0.300\\res\\values-night-v29\\values-night-v29.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.platovco.vtb.app-mergeDebugResources-69:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-71:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\2160829399639caa84fb5b0435e61d2c\\transformed\\material-1.6.1\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\34f92321bd6f6521c7678f34be61a401\\transformed\\material-1.6.1\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

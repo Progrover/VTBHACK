@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.platovco.vtb.R;
 import com.platovco.vtb.models.MarkBranch;
 import com.platovco.vtb.models.CustomPoint;
@@ -154,7 +155,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             if (isGPSEnabled()) {
                 boolean finalMapMoved = mapMoved;
                 if (areGoogleServicesAvailable()) {
-                    new FusedLocationProviderClient(getContext()).getLastLocation()
+                    LocationServices.getFusedLocationProviderClient(getActivity()).getLastLocation()
                             .addOnSuccessListener(location -> {
                                 if (location != null) {
                                     if (!finalMapMoved) {

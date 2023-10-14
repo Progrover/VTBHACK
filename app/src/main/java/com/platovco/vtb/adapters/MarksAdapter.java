@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,15 +16,14 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.platovco.vtb.R;
-import com.platovco.vtb.models.Mark;
+import com.platovco.vtb.models.MarkBranch;
 
 import java.util.ArrayList;
 
-import per.wsj.library.AndRatingBar;
 
 
 public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> {
-    private ArrayList<Mark> marks;
+    private ArrayList<MarkBranch> marks;
     Context context;
     LayoutInflater inflater;
 
@@ -36,12 +36,12 @@ public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Mark mark = marks.get(position);
+        MarkBranch mark = marks.get(position);
 
 
     }
 
-    public MarksAdapter(ArrayList<Mark> actions, LayoutInflater inflater) {
+    public MarksAdapter(ArrayList<MarkBranch> actions, LayoutInflater inflater) {
         this.marks = actions;
         this.inflater = inflater;
     }
@@ -57,7 +57,7 @@ public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> 
         final TextView mark;
         final TextView adress;
         final TextView distance;
-        final AndRatingBar rating;
+        final RatingBar rating;
         final TextView moreInfo;
 
 

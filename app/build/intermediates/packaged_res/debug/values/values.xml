@@ -8,13 +8,14 @@
     <color name="black">#FF000000</color>
     <color name="card_background">#282829</color>
     <color name="colorAccent">#ff3145</color>
-    <color name="colorPrimary">#1C1C1C</color>
-    <color name="colorPrimaryDark">#1E1E1E</color>
+    <color name="colorPrimary">#0586FB</color>
+    <color name="colorPrimaryDark">#0137FF</color>
     <color name="darkGrey">#1D1D1D</color>
     <color name="darkGrey2">#131313</color>
     <color name="darkRed">#870115</color>
     <color name="dark_blue">#0137ff</color>
-    <color name="lightGrey">#787878</color>
+    <color name="lightGrey">#B1AFAF</color>
+    <color name="light_blue">#0085FF</color>
     <color name="loginBkColor">#f0f0f0</color>
     <color name="mtrl_textinput_default_box_stroke_color" ns1:override="true">#818694</color>
     <color name="pink">#FFEE1656</color>
@@ -32,10 +33,14 @@
     <color name="titleText">#CDCDCD</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="warning">#E96A5A</color>
-    <color name="white">#F5EFEF</color>
+    <color name="white">#FFFFFF</color>
     <color name="whiteCardColor">#fff</color>
     <color name="whiteTextColor">#fff</color>
     <string name="app_name">VTB</string>
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+   </style>
     <style name="Base.Theme.VTB" parent="Theme.Material3.DayNight.NoActionBar">
         
         
@@ -50,5 +55,7 @@
         <item name="cornerSizeBottomRight">2dp</item>
         <item name="cornerSizeBottomLeft">2dp</item>
     </style>
-    <style name="Theme.VTB" parent="Base.Theme.VTB"/>
+    <style name="blueBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/light_blue</item>
+    </style>
 </resources>

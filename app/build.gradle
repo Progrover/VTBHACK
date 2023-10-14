@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
     id 'org.jetbrains.kotlin.android'
 }
 android {
@@ -32,10 +33,10 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.GwonHyeok:StickySwitch:0.0.16'
-    implementation 'com.github.wdsqjq:AndRatingBar:1.0.6'
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
@@ -43,7 +44,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'com.yandex.android:maps.mobile:4.1.0-lite'
+    implementation 'com.yandex.android:maps.mobile:4.4.0-full'
     def nav_version = "2.5.3"
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
@@ -64,10 +65,6 @@ dependencies {
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
     implementation "com.huawei.hms:location:6.11.0.301"
-    // Jackson
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.1'
-    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.10.1'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
 
 
 }

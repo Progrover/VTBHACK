@@ -9,8 +9,6 @@
     <color name="black">#FF000000</color>
     <color name="colorPrimary">#0586FB</color>
     <color name="colorPrimaryDark">#0137FF</color>
-    <color name="light_blue">#0085FF</color>
-
 
     <color name="darkGrey">#1D1D1D</color>
     <color name="darkGrey2">#131313</color>
@@ -46,5 +44,4 @@
     <color name="red">#D80512</color>
     <color name="separator">#353333</color>
     <color name="card_background">#282829</color>
-    <color name="dark_blue">#0137ff</color>
 </resources>

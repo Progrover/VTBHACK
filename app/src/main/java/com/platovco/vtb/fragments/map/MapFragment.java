@@ -5,20 +5,15 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.drawable.ColorDrawable;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,15 +30,25 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.platovco.vtb.R;
-import com.platovco.vtb.models.MarkBranch;
 import com.platovco.vtb.models.CustomPoint;
+import com.platovco.vtb.models.Mark;
+import com.platovco.vtb.providers.GoogleFusedLocationProvider;
+import com.platovco.vtb.providers.TextImageProvider;
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKit;
 import com.yandex.mapkit.MapKitFactory;
+import com.yandex.mapkit.RequestPoint;
+import com.yandex.mapkit.RequestPointType;
 import com.yandex.mapkit.ScreenPoint;
+import com.yandex.mapkit.directions.DirectionsFactory;
+import com.yandex.mapkit.directions.driving.DrivingOptions;
+import com.yandex.mapkit.directions.driving.DrivingRoute;
+import com.yandex.mapkit.directions.driving.DrivingRouter;
+import com.yandex.mapkit.directions.driving.DrivingSession;
+import com.yandex.mapkit.directions.driving.VehicleOptions;
+import com.yandex.mapkit.directions.driving.VehicleType;
 import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.location.FilteringMode;
 import com.yandex.mapkit.location.Location;
@@ -59,11 +64,13 @@ import com.yandex.mapkit.map.ClusterizedPlacemarkCollection;
 import com.yandex.mapkit.map.IconStyle;
 import com.yandex.mapkit.map.Map;
 import com.yandex.mapkit.map.MapObject;
+import com.yandex.mapkit.map.MapObjectCollection;
 import com.yandex.mapkit.map.MapObjectTapListener;
 import com.yandex.mapkit.map.MapWindow;
 import com.yandex.mapkit.map.PlacemarkMapObject;
 import com.yandex.mapkit.map.RotationType;
 import com.yandex.mapkit.mapview.MapView;
+import com.yandex.runtime.Error;
 import com.yandex.runtime.image.ImageProvider;
 
 import java.util.ArrayList;
@@ -71,7 +78,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MapFragment extends Fragment implements ClusterListener, MapObjectTapListener, ClusterTapListener {
+public class MapFragment extends Fragment implements ClusterListener, MapObjectTapListener, ClusterTapListener, DrivingSession.DrivingRouteListener {
 
     private MapViewModel mViewModel;
     private View rootView;
@@ -79,6 +86,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     private ImageView zoomPlusBTN;
     private ImageView zoomMinusBTN;
     private MapWindow mapWindow;
+    private MapObjectCollection mapObjects;
 
     private ImageView locationBTN;
     final CameraListener listener = new CameraListener() {
@@ -97,9 +105,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     public static float startZoom = 10.0f;
     public static float startAnimationDuration = 1;
 
-    private static final float FONT_SIZE = 20;
-    private static final float MARGIN_SIZE = 3;
-    private static final float STROKE_SIZE = 5;
+
     ClusterizedPlacemarkCollection clusterizedCollection;
     FragmentManager fragmentManager;
     PlacemarkMapObject userLocationPlacemark;
@@ -155,7 +161,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             if (isGPSEnabled()) {
                 boolean finalMapMoved = mapMoved;
                 if (areGoogleServicesAvailable()) {
-                    LocationServices.getFusedLocationProviderClient(getActivity()).getLastLocation()
+                    LocationServices.getFusedLocationProviderClient(requireContext()).getLastLocation()
                             .addOnSuccessListener(location -> {
                                 if (location != null) {
                                     if (!finalMapMoved) {
@@ -275,6 +281,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         zoomMinusBTN = rootView.findViewById(R.id.zoomMinusBTN);
         locationBTN = rootView.findViewById(R.id.locationBTN);
         loadingLL = rootView.findViewById(R.id.loadingLL);
+        mapObjects = mapView.getMap().getMapObjects().addCollection();
         fusedLocationClientHuawei = com.huawei.hms.location.LocationServices.getFusedLocationProviderClient(getContext());
         mapWindow = mapView.getMapWindow();
         requestPermissionLauncher = registerForActivityResult(
@@ -295,10 +302,10 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         );
     }
 
-    private void addPointOnMap(MarkBranch markBranch) {
+    private void addPointOnMap(Mark mark) {
         ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
-        PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(markBranch.getLatitude(), markBranch.getLongitude()));
-        mapObject.setUserData(markBranch);
+        PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
+        mapObject.setUserData(mark);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(
                         new PointF(0.5f, 1f)).
                 setRotationType(RotationType.NO_ROTATION)
@@ -337,9 +344,9 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         mViewModel.marks.observe(getViewLifecycleOwner(), this::drawPointsOnMap);
 
         getParentFragmentManager().setFragmentResultListener("markKey", getViewLifecycleOwner(), (requestKey, result) -> {
-            MarkBranch markBranch = (MarkBranch) result.getSerializable("markBranch");
+            Mark mark = (Mark) result.getSerializable("mark");
             mapView.getMap().move(
-                    new CameraPosition(new Point(markBranch.getLatitude(), markBranch.getLongitude()), 18f, 0.0f, 0.0f),
+                    new CameraPosition(new Point(mark.getLatitude(), mark.getLongitude()), 18f, 0.0f, 0.0f),
                     new Animation(Animation.Type.SMOOTH, (float) 0.8),
                     null);
         });
@@ -358,10 +365,10 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     @SuppressWarnings("unchecked")
-    private void drawPointsOnMap(List<MarkBranch> markBranches) {
+    private void drawPointsOnMap(ArrayList<Mark> marks) {
         clusterizedCollection.clear();
-        for (MarkBranch markBranch : markBranches) {
-            addPointOnMap(markBranch);
+        for (Mark mark : marks) {
+            addPointOnMap(mark);
         }
         clusterizedCollection.clusterPlacemarks(70, 20);
     }
@@ -411,17 +418,17 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
             dialog.getWindow().setLayout(width, height);
             dialog.setCancelable(true);
-            MarkBranch markBranch = (MarkBranch) mapObject.getUserData();
+            Mark mark = (Mark) mapObject.getUserData();
             TextView aboutTV = dialog.findViewById(R.id.aboutTV);
 
             aboutTV.setOnClickListener(view -> {
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("markBranch", markBranch);
+                bundle.putSerializable("mark", mark);
                 dialog.cancel();
                 //Navigation.findNavController(getActivity(), R.id.host_fragment).navigate(R.id.eventInformationFragment, bundle);
             });
 
-            if (markBranch != null) {
+            if (mark != null) {
 
             }
             if (getActivity() != null && !getActivity().isFinishing()) {
@@ -434,56 +441,25 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         return false;
     }
 
-    public class TextImageProvider extends ImageProvider {
-        @Override
-        public String getId() {
-            return "text_" + text;
-        }
+    private void buildRoute(Point fromPoint, Point toPoint) {
+        DrivingRouter drivingRouter = DirectionsFactory.getInstance().createDrivingRouter();
+        DrivingOptions drivingOptions = new DrivingOptions();
+        drivingOptions.setRoutesCount(1);
+        VehicleOptions vehicleOptions = new VehicleOptions();
+        vehicleOptions.setVehicleType(VehicleType.DEFAULT);
+        ArrayList<RequestPoint> points = new ArrayList<>();
+        points.add(new RequestPoint(fromPoint, RequestPointType.WAYPOINT, null, null));
+        points.add(new RequestPoint(toPoint, RequestPointType.WAYPOINT, null, null));
+        drivingRouter.requestRoutes(
+                points,
+                drivingOptions,
+                vehicleOptions,
+                this
+        );
 
-        private final String text;
-
-        @Override
-        public Bitmap getImage() {
-            DisplayMetrics metrics = new DisplayMetrics();
-            WindowManager manager = (WindowManager) requireActivity().getSystemService(Context.WINDOW_SERVICE);
-            manager.getDefaultDisplay().getMetrics(metrics);
-            Paint textPaint = new Paint();
-            textPaint.setTextSize(FONT_SIZE * metrics.density);
-            textPaint.setTextAlign(Paint.Align.CENTER);
-            textPaint.setStyle(Paint.Style.FILL);
-            textPaint.setColor(Color.WHITE);
-            textPaint.setAntiAlias(true);
-            float widthF = textPaint.measureText(text);
-            Paint.FontMetrics textMetrics = textPaint.getFontMetrics();
-            float heightF = Math.abs(textMetrics.bottom) + Math.abs(textMetrics.top);
-            float textRadius = (float) Math.sqrt(widthF * widthF + heightF * heightF) / 2;
-            float internalRadius = textRadius + MARGIN_SIZE * metrics.density;
-            float externalRadius = internalRadius + STROKE_SIZE * metrics.density;
-            int width = (int) (2 * externalRadius + 0.5);
-            Bitmap bitmap = Bitmap.createBitmap(width, width, Bitmap.Config.ARGB_8888);
-            Canvas canvas = new Canvas(bitmap);
-            Paint backgroundPaint = new Paint();
-            backgroundPaint.setAntiAlias(true);
-            backgroundPaint.setColor(Color.WHITE);
-            canvas.drawCircle((float) width / 2, (float) width / 2, externalRadius, backgroundPaint);
-            backgroundPaint.setColor(getResources().getColor(R.color.colorAccent));
-            canvas.drawCircle((float) width / 2, (float) width / 2, internalRadius, backgroundPaint);
-            canvas.drawText(
-                    text,
-                    (float) width / 2,
-                    (float) width / 2 - (textMetrics.ascent + textMetrics.descent) / 2,
-                    textPaint);
-            return bitmap;
-        }
-
-        public TextImageProvider(String text) {
-            int number = Integer.parseInt(text);
-            if (number >= 10) this.text = "10+";
-            else if (number >= 5) this.text = "5+";
-            else this.text = text;
-        }
 
     }
+
 
     @Override
     public void onStop() {
@@ -509,9 +485,21 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     @Override
+    public void onDrivingRoutes(List<DrivingRoute> routes) {
+        for (DrivingRoute route : routes) {
+            mapObjects.addPolyline(route.getGeometry());
+        }
+    }
+
+    @Override
+    public void onDrivingRoutesError(@NonNull Error error) {
+
+    }
+
+    @Override
     public void onClusterAdded(Cluster cluster) {
         cluster.getPlacemarks().get(0).getDirection();
-        cluster.getAppearance().setIcon(new TextImageProvider(Integer.toString(cluster.getSize())));
+        cluster.getAppearance().setIcon(new TextImageProvider(requireContext(), Integer.toString(cluster.getSize())));
         cluster.addClusterTapListener(this);
     }
 }

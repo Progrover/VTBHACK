@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-69:/values-my-rZG/values-my-rZG.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-3\\7a492f51f0e09e853052fba2eba72eb4\\transformed\\ui-6.5.0.300\\res\\values-my-rZG\\values-my-rZG.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,253,582,652,899",
+                        "endColumns": "197,328,69,246,68",
+                        "endOffsets": "248,577,647,894,963"
+                    }
+                }
+            ]
+        }
+    ]
+}

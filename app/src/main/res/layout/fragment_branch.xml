@@ -40,9 +40,10 @@
                     android:id="@+id/buildWayTV"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="9"
-                    android:gravity="right"
                     android:layout_gravity="center_vertical"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/light_font"
+                    android:gravity="right"
                     android:paddingVertical="3dp"
                     android:text="Построить маршрут"
                     android:textColor="@color/dark_blue"
@@ -70,8 +71,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:text="Цимлянская ул. 24, стр. 2"
-                android:textSize="22dp" />
+                android:fontFamily="@font/light_font"
+                android:textSize="22dp"
+                tools:text="Цимлянская ул. 24, стр. 2" />
 
             <LinearLayout
                 android:id="@+id/ratingLL"
@@ -84,22 +86,22 @@
                     android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:isIndicator="true"
-                    app:starColor="@color/light_blue"
-                    app:subStarColor="@color/lightGrey"
-                    android:stepSize="0.5"
-                    android:numStars="5"
                     android:layout_marginRight="5dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
                     android:rating="3.0"
-                    />
+                    android:stepSize="0.5"
+                    app:starColor="@color/light_blue"
+                    app:subStarColor="@color/lightGrey" />
 
                 <TextView
                     android:id="@+id/ratingNumTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    tools:text="4.0"
-                    android:textSize="20dp" />
+                    android:fontFamily="@font/light_font"
+                    android:textSize="20dp"
+                    tools:text="4.0" />
 
                 <TextView
                     android:id="@+id/marksCountTV"
@@ -107,27 +109,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
-                    tools:text="(500)"
-                    android:textSize="17dp" />
+                    android:fontFamily="@font/light_font"
+                    android:textSize="17dp"
+                    tools:text="(500)" />
             </LinearLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-            <TextView
-                android:id="@+id/loadStrokeTV"
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:text="Загруженность"
-                android:textSize="22dp"/>
-    <TextView
-        android:id="@+id/ratingMarkTV"
-        android:layout_width="match_parent"
-        android:text="3"
-        android:background="@drawable/light_blue_circle"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loadStrokeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/title_font"
+                    android:text="Загруженность"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:id="@+id/ratingMarkTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_blue_circle"
+                    android:text="3" />
+            </LinearLayout>
 
 
             <LinearLayout
@@ -141,7 +148,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/title_font"
                     android:text="Контакты"
+
                     android:textSize="22dp" />
 
                 <TextView
@@ -149,6 +158,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="8‒800‒200‒77‒99 (для юр. лиц)"
                     android:textSize="18dp" />
 
@@ -157,6 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="8‒800‒100‒24‒24 (для физ. лиц)"
                     android:textSize="18dp" />
 
@@ -165,6 +178,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+
+                    android:fontFamily="@font/light_font"
                     android:text="8‒800‒500‒24‒24 (по привилегиям)"
                     android:textSize="18dp" />
             </LinearLayout>
@@ -180,7 +195,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/title_font"
                     android:text="Услуги"
+
                     android:textSize="22dp" />
 
                 <TextView
@@ -188,7 +205,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
                     android:text="Оформление автокредитов"
+
                     android:textSize="18dp" />
 
                 <TextView
@@ -196,6 +215,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="Оформление ипотеки"
                     android:textSize="18dp" />
 
@@ -204,7 +225,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
                     android:text="Потребительские кредиты"
+
                     android:textSize="18dp" />
 
                 <TextView
@@ -212,7 +235,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
                     android:text="Вклады"
+
                     android:textSize="18dp" />
 
                 <TextView
@@ -220,6 +245,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="Оформление дебетовых и кредитных карт"
                     android:textSize="18dp" />
 
@@ -228,6 +255,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="Переводы и платежи"
                     android:textSize="18dp" />
 
@@ -236,6 +265,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/light_font"
+
                     android:text="Погашение кредита"
                     android:textSize="18dp" />
             </LinearLayout>

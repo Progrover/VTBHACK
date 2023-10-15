@@ -37,8 +37,6 @@ public class PointListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         DslTabLayout switcher = view.findViewById(R.id.switcher);
-        TextView bankomatsTV = view.findViewById(R.id.bankomatsStrokeTV);
-        TextView branchesTV = view.findViewById(R.id.branchesStrokeTV);
         RecyclerView recyclerView = view.findViewById(R.id.marksRV);
     }
 

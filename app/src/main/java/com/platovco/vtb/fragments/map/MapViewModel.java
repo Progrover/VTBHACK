@@ -1,25 +1,21 @@
 package com.platovco.vtb.fragments.map;
 
-import android.os.Bundle;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.platovco.vtb.models.ActualRoute;
 import com.platovco.vtb.models.MarkBranch;
 import com.platovco.vtb.web.ConnectionService;
 import com.platovco.vtb.web.JsonService;
 import com.platovco.vtb.web.httpData.branch.BranchFindInRangeRequest;
 import com.platovco.vtb.web.httpData.branch.BranchFindInRangeResponse;
-import com.platovco.vtb.web.httpData.branch.BranchFindOptimalRequest;
 import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.map.CameraPosition;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import okhttp3.ResponseBody;
@@ -28,7 +24,9 @@ import okhttp3.ResponseBody;
 public class MapViewModel extends ViewModel implements ConnectionService {
     public MutableLiveData<List<MarkBranch>> marks = new MutableLiveData<>();
     public MutableLiveData<Boolean> visibilityOfLoadingLD = new MutableLiveData<>(false);
-    public MutableLiveData<Bundle> filters = new MutableLiveData<>();
+    public MutableLiveData<ActualRoute> actualRouteLD = new MutableLiveData<>();
+    public MutableLiveData<Point> destinationPointLD = new MutableLiveData<>();
+
     public MutableLiveData<CameraPosition> cameraPositionLD = new MutableLiveData<>();
 
     public void getMarksInZone(Point topRightPoint, Point bottomLeftPoint) {
@@ -53,6 +51,6 @@ public class MapViewModel extends ViewModel implements ConnectionService {
 
     @Override
     public void onMessage(String message) {
-        Log.i("connection_message: ", message);
+        Log.i("conn: ", message);
     }
 }

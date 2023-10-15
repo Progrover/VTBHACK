@@ -9,5 +9,14 @@
         android:id="@+id/mapFragment"
         android:name="com.platovco.vtb.fragments.map.MapFragment"
         android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_bankomatFragment2"
+            app:destination="@id/bankomatFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankomatFragment2"
+        android:name="com.platovco.vtb.fragments.bankomat.BankomatFragment"
+        android:label="fragment_bankomat"
+        tools:layout="@layout/fragment_bankomat" />
 </navigation>

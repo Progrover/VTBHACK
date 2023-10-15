@@ -30,7 +30,7 @@ public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.marks_item, parent, false);
+        View view = inflater.inflate(R.layout.dialog_mark, parent, false);
         return new MarksAdapter.ViewHolder(view, context);
     }
 

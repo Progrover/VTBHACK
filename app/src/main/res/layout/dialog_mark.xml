@@ -42,6 +42,7 @@
             android:gravity="center"
             android:maxLines="5"
             android:text="Адрес"
+            android:fontFamily="@font/light_font"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
@@ -72,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="4.0"
+                android:fontFamily="@font/light_font"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -82,6 +84,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="5dp"
                 android:text="(500)"
+                android:fontFamily="@font/light_font"
                 android:textColor="@color/black"
                 android:textSize="17dp" />
         </LinearLayout>
@@ -109,6 +112,7 @@
                 android:gravity="center"
                 android:paddingVertical="10dp"
                 android:text="Подробнее"
+                android:fontFamily="@font/light_font"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 
@@ -129,6 +133,7 @@
                 android:gravity="center"
                 android:paddingVertical="10dp"
                 android:text="Маршрут"
+                android:fontFamily="@font/light_font"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 

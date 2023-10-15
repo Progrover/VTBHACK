@@ -53,22 +53,22 @@ public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        final ImageView markImage;
-        final TextView mark;
-        final TextView adress;
-        final TextView distance;
-        final AndRatingBar rating;
-        final TextView moreInfo;
+//        final ImageView markImage;
+//        final TextView mark;
+//        final TextView adress;
+//        final TextView distance;
+//        final AndRatingBar rating;
+//        final TextView moreInfo;
 
 
         public ViewHolder(@NonNull View itemView, final Context context) {
             super(itemView);
-            markImage = itemView.findViewById(R.id.markImageTV);
-            mark = itemView.findViewById(R.id.markTV);
-            adress = itemView.findViewById(R.id.adressTV);
-            distance = itemView.findViewById(R.id.distanceTV);
-            rating = itemView.findViewById(R.id.ratingBar);
-            moreInfo =  itemView.findViewById(R.id.moreTV);
+//            markImage = itemView.findViewById(R.id.markImageTV);
+//            mark = itemView.findViewById(R.id.markTV);
+//            adress = itemView.findViewById(R.id.adressTV);
+//            distance = itemView.findViewById(R.id.distanceTV);
+//            rating = itemView.findViewById(R.id.ratingBar);
+//            moreInfo =  itemView.findViewById(R.id.moreTV);
 
 
         }

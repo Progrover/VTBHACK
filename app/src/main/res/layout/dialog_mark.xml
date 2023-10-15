@@ -118,7 +118,7 @@
                 android:background="@color/white" />
 
             <TextView
-                android:id="@+id/chatTV"
+                android:id="@+id/routeTV"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

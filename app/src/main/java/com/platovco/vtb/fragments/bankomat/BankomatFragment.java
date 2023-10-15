@@ -45,7 +45,7 @@ public class BankomatFragment extends Fragment {
             Bundle bundle2 = new Bundle();
             bundle2.putDouble("longitude", markBranch.getLongitude());
             bundle2.putDouble("latitude", markBranch.getLatitude());
-            Navigation.findNavController(v).navigate(R.id.mapFragment, bundle);
+            Navigation.findNavController(v).navigate(R.id.mapFragment, bundle2);
         });
         adressTV.setText(branch.getAddress());
         double grade = branch.getGrade();

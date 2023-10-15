@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.platovco.vtb.R;
+import com.platovco.vtb.models.Branch;
+import com.platovco.vtb.models.MarkBranch;
 
 import per.wsj.library.AndRatingBar;
 
@@ -29,13 +31,20 @@ public class BankomatFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Bundle bundle = getArguments();
+        MarkBranch markBranch = (MarkBranch) bundle.get("mark");
+        Branch branch = markBranch.getBranch();
         ImageView branchPhotoIV = view.findViewById(R.id.branchPhotoIV);
         TextView adressTV = view.findViewById(R.id.adressTV);
         AndRatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView ratingNumTV = view.findViewById(R.id.ratingNumTV);
         TextView marksCountTV = view.findViewById(R.id.marksCountTV);
-TextView minRatingMarkTV = view.findViewById(R.id.minRatingMarkTV);
-TextView maxRatingMarkTV = view.findViewById(R.id.maxRatingMarkTV);
+        adressTV.setText(branch.getAddress());
+        double grade = branch.getGrade();
+        ratingBar.setRating((float) grade);
+        ratingNumTV.setText(String.valueOf(grade));
+        marksCountTV.setText("  (" +String.valueOf(branch.getAmountOfReviews()) + ")");
+
     }
 
     @Override

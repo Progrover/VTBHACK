@@ -35,8 +35,6 @@ public class BranchFragment extends Fragment {
         AndRatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView ratingNumTV = view.findViewById(R.id.ratingNumTV);
         TextView marksCountTV = view.findViewById(R.id.marksCountTV);
-        TextView minRatingMarkTV = view.findViewById(R.id.minRatingMarkTV);
-        TextView maxRatingMarkTV = view.findViewById(R.id.maxRatingMarkTV);
     }
 
     @Override

@@ -1,0 +1,461 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.platovco.vtb"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:13:5-79
+11-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:13:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:14:5-67
+12-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:14:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:15:5-76
+13-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:15:22-73
+14    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+14-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:16:5-76
+14-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:16:22-73
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:17:5-79
+15-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:17:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:21:5-68
+16-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:21:22-65
+17    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 用途：精确位置权限 涉及模块：融合定位、室内室外定位、地理围栏、众包、SDM -->
+17-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:22:5-81
+17-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:22:22-78
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->[com.huawei.hms.LocationLiteSdk:core:2.11.0.302] C:\Users\Xiaomi\.gradle\caches\transforms-3\86c3fe0a1f8aaa40afaf78f18c5808e2\transformed\core-2.11.0.302\AndroidManifest.xml:14:5-81
+18-->[com.huawei.hms.LocationLiteSdk:core:2.11.0.302] C:\Users\Xiaomi\.gradle\caches\transforms-3\86c3fe0a1f8aaa40afaf78f18c5808e2\transformed\core-2.11.0.302\AndroidManifest.xml:14:22-78
+19
+20    <permission
+20-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+21        android:name="com.platovco.vtb.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.platovco.vtb.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Permission will be merged into the manifest of the hosting app. -->
+24-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+25    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:13:5-77
+26-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:13:22-74
+27
+28    <queries>
+28-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:14:5-21:15
+29        <intent>
+29-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:15:9-17:18
+30            <action android:name="com.huawei.hms.core.aidlservice" />
+30-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:16:13-70
+30-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:16:21-67
+31        </intent>
+32        <intent>
+32-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:18:9-20:18
+33            <action android:name="com.huawei.hms.core" />
+33-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:19:13-58
+33-->[com.huawei.hms:device:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\6db9720f7e8e7cdcefe4aca059a1822d\transformed\device-6.5.0.300\AndroidManifest.xml:19:21-55
+34        </intent>
+35    </queries>
+36
+37    <application
+37-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:5:5-25:19
+38        android:name="com.platovco.vtb.App"
+38-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:13:9-28
+39        android:allowBackup="true"
+39-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:6:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.9.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\d902389fe4c840d959667da2455dd4b9\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+41        android:dataExtractionRules="@xml/data_extraction_rules"
+41-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:7:9-65
+42        android:debuggable="true"
+43        android:extractNativeLibs="false"
+44        android:fullBackupContent="@xml/backup_rules"
+44-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:8:9-54
+45        android:icon="@mipmap/ic_launcher"
+45-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:9:9-43
+46        android:label="@string/app_name"
+46-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:10:9-41
+47        android:roundIcon="@mipmap/ic_launcher_round"
+47-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:11:9-54
+48        android:supportsRtl="true"
+48-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:12:9-35
+49        android:testOnly="true"
+50        android:theme="@style/AppTheme" >
+50-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:14:9-40
+51        <activity
+51-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:16:9-24:20
+52            android:name="com.platovco.vtb.activities.MainActivity"
+52-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:17:13-52
+53            android:exported="true" >
+53-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:18:13-36
+54            <intent-filter>
+54-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:19:13-23:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:20:17-69
+55-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:20:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:22:17-77
+57-->C:\Users\Xiaomi\Downloads\VTBHACK2\app\src\main\AndroidManifest.xml:22:27-74
+58            </intent-filter>
+59        </activity>
+60        <activity
+60-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:23:9-27:75
+61            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+61-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:24:13-93
+62            android:excludeFromRecents="true"
+62-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:25:13-46
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:26:13-37
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:27:13-72
+65        <!--
+66            Service handling Google Sign-In user revocation. For apps that do not integrate with
+67            Google Sign-In, this service will never be started.
+68        -->
+69        <service
+69-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:33:9-37:51
+70            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+70-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:34:13-89
+71            android:exported="true"
+71-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:35:13-36
+72            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+72-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:36:13-107
+73            android:visibleToInstantApps="true" />
+73-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\195b0294ee5c5f82bc5fddc1e09bc34d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:37:13-48
+74
+75        <meta-data
+75-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:25:9-27:38
+76            android:name="yandex.maps.runtime.stl.linkage"
+76-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:26:13-59
+77            android:value="static" />
+77-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:27:13-35
+78
+79        <service
+79-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:29:9-32:72
+80            android:name="com.evernote.android.job.patched.internal.v21.PlatformJobService"
+80-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:30:13-92
+81            android:exported="false"
+81-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:31:13-37
+82            android:permission="android.permission.BIND_JOB_SERVICE" />
+82-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:32:13-69
+83        <service
+83-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:33:9-36:72
+84            android:name="com.evernote.android.job.patched.internal.v14.PlatformAlarmService"
+84-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:34:13-94
+85            android:exported="false"
+85-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:35:13-37
+86            android:permission="android.permission.BIND_JOB_SERVICE" />
+86-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:36:13-69
+87        <service
+87-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:37:9-39:40
+88            android:name="com.evernote.android.job.patched.internal.v14.PlatformAlarmServiceExact"
+88-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:38:13-99
+89            android:exported="false" />
+89-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:39:13-37
+90
+91        <receiver
+91-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:41:9-50:20
+92            android:name="com.evernote.android.job.patched.internal.v14.PlatformAlarmReceiver"
+92-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:42:13-95
+93            android:exported="false" >
+93-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:43:13-37
+94            <intent-filter>
+94-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:44:13-49:29
+95
+96                <!-- Keep the filter for legacy intents -->
+97                <action android:name="com.evernote.android.job.patched.internal.v14.RUN_JOB" />
+97-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:47:17-96
+97-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:47:25-93
+98                <action android:name="net.vrallev.android.job.v14.RUN_JOB" />
+98-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:48:17-78
+98-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:48:25-75
+99            </intent-filter>
+100        </receiver>
+101        <receiver
+101-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:51:9-60:20
+102            android:name="com.evernote.android.job.patched.internal.JobBootReceiver"
+102-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:52:13-85
+103            android:exported="false" >
+103-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:53:13-37
+104            <intent-filter>
+104-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:54:13-59:29
+105                <action android:name="android.intent.action.BOOT_COMPLETED" />
+105-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:55:17-79
+105-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:55:25-76
+106                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+106-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:56:17-82
+106-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:56:25-79
+107                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+107-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:57:17-82
+107-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:57:25-79
+108                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+108-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:58:17-84
+108-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:58:25-81
+109            </intent-filter>
+110        </receiver>
+111
+112        <service
+112-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:62:9-65:72
+113            android:name="com.evernote.android.job.patched.internal.JobRescheduleService"
+113-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:63:13-90
+114            android:exported="false"
+114-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:64:13-37
+115            android:permission="android.permission.BIND_JOB_SERVICE" />
+115-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:65:13-69
+116        <service
+116-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:66:9-69:72
+117            android:name="com.yandex.runtime.connectivity.internal.ConnectivityService"
+117-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:67:13-88
+118            android:exported="true"
+118-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:68:13-36
+119            android:permission="android.permission.BIND_JOB_SERVICE" />
+119-->[com.yandex.android:maps.mobile:4.4.0-full] C:\Users\Xiaomi\.gradle\caches\transforms-3\b18ec6c2e810bbdcf627719548bfa7ee\transformed\maps.mobile-4.4.0-full\AndroidManifest.xml:69:13-69
+120
+121        <activity
+121-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\20d5345632f9ee5ece5a88ac9809c78d\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+122            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+122-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\20d5345632f9ee5ece5a88ac9809c78d\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+123            android:exported="false"
+123-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\20d5345632f9ee5ece5a88ac9809c78d\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+124-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\20d5345632f9ee5ece5a88ac9809c78d\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+125
+126        <meta-data
+126-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\addddeea24af4c54beef4c5c65ea2010\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+127            android:name="com.google.android.gms.version"
+127-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\addddeea24af4c54beef4c5c65ea2010\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+128            android:value="@integer/google_play_services_version" />
+128-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\addddeea24af4c54beef4c5c65ea2010\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+129
+130        <provider
+130-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+131            android:name="androidx.startup.InitializationProvider"
+131-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+132            android:authorities="com.platovco.vtb.androidx-startup"
+132-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+133            android:exported="false" >
+133-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+134            <meta-data
+134-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+135                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+135-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+136                android:value="androidx.startup" />
+136-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\0e4a25ccf85d94bde45f47425e9667bb\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+137            <meta-data
+137-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Xiaomi\.gradle\caches\transforms-3\37b2e1c964a66ad7be9f581d321abdd0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+138                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+138-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Xiaomi\.gradle\caches\transforms-3\37b2e1c964a66ad7be9f581d321abdd0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+139                android:value="androidx.startup" />
+139-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Xiaomi\.gradle\caches\transforms-3\37b2e1c964a66ad7be9f581d321abdd0\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+140            <meta-data
+140-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+141                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+142                android:value="androidx.startup" />
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+143        </provider> <!-- 声明Kit SDK的名称和版本号 -->
+144        <!-- Declare the SDK name and version -->
+145        <meta-data
+145-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:15:9-17:51
+146            android:name="com.huawei.hms.client.service.name:location"
+146-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:16:13-71
+147            android:value="location:6.11.0.301" /> <!-- 声明对Kit服务依赖的最低API Level -->
+147-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:17:13-48
+148        <!-- Declare minSdkVersion required for using the kit -->
+149        <meta-data
+149-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:20:9-22:33
+150            android:name="com.huawei.hms.min_api_level:location:location"
+150-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:21:13-74
+151            android:value="1" /> <!-- 关掉打点上报初始化 -->
+151-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:22:13-30
+152        <!-- Disable reporting of O&M logs -->
+153        <meta-data
+153-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:25:9-27:36
+154            android:name="com.huawei.hms.client.bi.setting"
+154-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:26:13-60
+155            android:value="true" />
+155-->[com.huawei.hms:location:6.11.0.301] C:\Users\Xiaomi\.gradle\caches\transforms-3\69127ca2db09f0d21ebde4629543f532\transformed\location-6.11.0.301\AndroidManifest.xml:27:13-33
+156        <meta-data
+156-->[com.huawei.hms.LocationLiteSdk:core:2.11.0.302] C:\Users\Xiaomi\.gradle\caches\transforms-3\86c3fe0a1f8aaa40afaf78f18c5808e2\transformed\core-2.11.0.302\AndroidManifest.xml:20:9-22:33
+157            android:name="com.huawei.hms.min_api_level:com.huawei.hms:location:location"
+157-->[com.huawei.hms.LocationLiteSdk:core:2.11.0.302] C:\Users\Xiaomi\.gradle\caches\transforms-3\86c3fe0a1f8aaa40afaf78f18c5808e2\transformed\core-2.11.0.302\AndroidManifest.xml:21:13-89
+158            android:value="1" />
+158-->[com.huawei.hms.LocationLiteSdk:core:2.11.0.302] C:\Users\Xiaomi\.gradle\caches\transforms-3\86c3fe0a1f8aaa40afaf78f18c5808e2\transformed\core-2.11.0.302\AndroidManifest.xml:22:13-30
+159
+160        <uses-library
+160-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+161            android:name="androidx.window.extensions"
+161-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+162            android:required="false" />
+162-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+163        <uses-library
+163-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+164            android:name="androidx.window.sidecar"
+164-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+165            android:required="false" />
+165-->[androidx.window:window:1.0.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\8e866653f58db3b5602ca37fb7436020\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+166
+167        <receiver
+167-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+168            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+168-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+169            android:directBootAware="false"
+169-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+170            android:enabled="true"
+170-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+171            android:exported="true"
+171-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+172            android:permission="android.permission.DUMP" >
+172-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+173            <intent-filter>
+173-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+174                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+175            </intent-filter>
+176            <intent-filter>
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+177                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+178            </intent-filter>
+179            <intent-filter>
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+180                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+181            </intent-filter>
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+183                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Xiaomi\.gradle\caches\transforms-3\12cbeb7351b20ffc9671339732b513e2\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+184            </intent-filter>
+185        </receiver> <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+186        <meta-data
+186-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:15:9-17:46
+187            android:name="com.huawei.hms.client.service.name:base"
+187-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:16:13-67
+188            android:value="base:6.5.0.300" /> <!-- SDK依赖的HMSCore的最低api level元数据 -->
+188-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:17:13-43
+189        <meta-data
+189-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:20:9-22:33
+190            android:name="com.huawei.hms.min_api_level:base:hmscore"
+190-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:21:13-69
+191            android:value="1" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+191-->[com.huawei.hms:base:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\35d6e28155bcdf673503ecd13c3245e8\transformed\base-6.5.0.300\AndroidManifest.xml:22:13-30
+192        <activity
+192-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:18:9-24:45
+193            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+193-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:19:13-100
+194            android:enabled="false"
+194-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:20:13-36
+195            android:exported="false"
+195-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:21:13-37
+196            android:launchMode="singleInstance"
+196-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:22:13-48
+197            android:process=":playcore_missing_splits_activity"
+197-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:23:13-64
+198            android:stateNotNeeded="true" />
+198-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:24:13-42
+199        <activity
+199-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:25:9-29:65
+200            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+200-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:26:13-93
+201            android:exported="false"
+201-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:27:13-37
+202            android:stateNotNeeded="true"
+202-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:28:13-42
+203            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
+203-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:29:13-62
+204        <service
+204-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:32:9-39:19
+205            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+205-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:33:13-94
+206            android:enabled="false"
+206-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:34:13-36
+207            android:exported="true" >
+207-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:35:13-36
+208            <meta-data
+208-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:36:13-38:41
+209                android:name="com.google.android.play.core.assetpacks.versionCode"
+209-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:37:17-83
+210                android:value="11003" />
+210-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:38:17-38
+211        </service>
+212        <service
+212-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:40:9-43:40
+213            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
+213-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:41:13-95
+214            android:enabled="false"
+214-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:42:13-36
+215            android:exported="false" /> <!-- 用于判断是否集成了本lib -->
+215-->[com.google.android.play:core:1.10.3] C:\Users\Xiaomi\.gradle\caches\transforms-3\51e70260b691071592daab41d455a708\transformed\core-1.10.3\AndroidManifest.xml:43:13-37
+216        <meta-data
+216-->[com.huawei.hms:availableupdate:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\41bdf30dbec769410a79442bb6a171f4\transformed\availableupdate-6.5.0.300\AndroidManifest.xml:17:9-19:35
+217            android:name="availableLoaded"
+217-->[com.huawei.hms:availableupdate:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\41bdf30dbec769410a79442bb6a171f4\transformed\availableupdate-6.5.0.300\AndroidManifest.xml:18:13-43
+218            android:value="yes" />
+218-->[com.huawei.hms:availableupdate:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\41bdf30dbec769410a79442bb6a171f4\transformed\availableupdate-6.5.0.300\AndroidManifest.xml:19:13-32
+219
+220        <activity
+220-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:10:9-21:20
+221            android:name="com.huawei.hms.activity.BridgeActivity"
+221-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:11:13-66
+222            android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode"
+222-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:12:13-131
+223            android:excludeFromRecents="true"
+223-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:13:13-46
+224            android:exported="false"
+224-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:14:13-37
+225            android:hardwareAccelerated="true"
+225-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:15:13-47
+226            android:screenOrientation="behind"
+226-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:16:13-47
+227            android:theme="@style/Base_Translucent" >
+227-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:17:13-52
+228            <meta-data
+228-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:18:13-20:77
+229                android:name="hwc-theme"
+229-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:19:17-41
+230                android:value="androidhwext:style/Theme.Emui.Translucent" />
+230-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:20:17-74
+231        </activity>
+232        <activity
+232-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:22:9-26:20
+233            android:name="com.huawei.hms.activity.EnableServiceActivity"
+233-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:23:13-73
+234            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+234-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:24:13-106
+235            android:exported="false" >
+235-->[com.huawei.hms:ui:6.5.0.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\7cac8926a8ecee86ee9fea3fcd9c5781\transformed\ui-6.5.0.300\AndroidManifest.xml:25:13-37
+236        </activity>
+237
+238        <provider
+238-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:11:9-14:40
+239            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+239-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:12:13-90
+240            android:authorities="com.platovco.vtb.AGCInitializeProvider"
+240-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:13:13-73
+241            android:exported="false" />
+241-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:14:13-37
+242
+243        <service
+243-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:16:9-18:40
+244            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+244-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:17:13-70
+245            android:exported="false" />
+245-->[com.huawei.agconnect:agconnect-core:1.6.5.300] C:\Users\Xiaomi\.gradle\caches\transforms-3\ada5d467daaf2a463b8178751962969d\transformed\agconnect-core-1.6.5.300\AndroidManifest.xml:18:13-37
+246    </application>
+247
+248</manifest>

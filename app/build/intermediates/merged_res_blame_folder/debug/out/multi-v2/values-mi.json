@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.platovco.vtb.app-mergeDebugResources-71:/values-mi/values-mi.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Xiaomi\\.gradle\\caches\\transforms-3\\7cac8926a8ecee86ee9fea3fcd9c5781\\transformed\\ui-6.5.0.300\\res\\values-mi\\values-mi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,237,538,605,852",
+                        "endColumns": "181,300,66,246,69",
+                        "endOffsets": "232,533,600,847,917"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -39,11 +39,13 @@ public class BankomatFragment extends Fragment {
         AndRatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView ratingNumTV = view.findViewById(R.id.ratingNumTV);
         TextView marksCountTV = view.findViewById(R.id.marksCountTV);
+        TextView loadTV = view.findViewById(R.id.loadTV);
         adressTV.setText(branch.getAddress());
         double grade = branch.getGrade();
         ratingBar.setRating((float) grade);
         ratingNumTV.setText(String.valueOf(grade));
         marksCountTV.setText("  (" +String.valueOf(branch.getAmountOfReviews()) + ")");
+        loadTV.setText("" + branch.getLoad());
 
     }
 

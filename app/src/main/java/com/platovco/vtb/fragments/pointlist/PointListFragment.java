@@ -40,16 +40,6 @@ public class PointListFragment extends Fragment {
         TextView bankomatsTV = view.findViewById(R.id.bankomatsStrokeTV);
         TextView branchesTV = view.findViewById(R.id.branchesStrokeTV);
         RecyclerView recyclerView = view.findViewById(R.id.marksRV);
-        bankomatsTV.setOnClickListener(v -> {
-            if (!(switcher.getCurrentItemView().equals(bankomatsTV))) {
-                ArrayList<Mark> marks;
-            }
-        });
-        branchesTV.setOnClickListener(v -> {
-            if (!(switcher.getCurrentItemView().equals(branchesTV))){
-
-            }
-        });
     }
 
     @Override

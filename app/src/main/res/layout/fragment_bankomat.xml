@@ -1,209 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.bankomat.BankomatFragment">
 
 
-        <ScrollView
-            android:id="@+id/scrollView"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/basicLL"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/basicLL"
+                android:id="@+id/upSideBarLL"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="15dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
 
-                <LinearLayout
-                    android:id="@+id/upSideBarLL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
-                    android:paddingVertical="10dp">
-
-                    <ImageView
-                        android:id="@+id/back_arrow"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_back_arrow"
-                        app:tint="@color/dark_blue" />
-
-                    <TextView
-                        android:id="@+id/buildWayTV"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="9"
-                        android:gravity="right"
-                        android:layout_gravity="center_vertical"
-                        android:paddingVertical="3dp"
-                        android:text="Построить маршрут"
-                        android:fontFamily="@font/light_font"
-                        android:textColor="@color/dark_blue"
-                        android:textSize="18dp" />
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/BranchPhotoCV"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginVertical="10dp"
-                    app:cardCornerRadius="10dp">
-
-                    <ImageView
-                        android:id="@+id/branchPhotoIV"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/img" />
-                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_back_arrow"
+                    app:tint="@color/dark_blue" />
 
                 <TextView
-                    android:id="@+id/adressTV"
-                    android:layout_width="match_parent"
+                    android:id="@+id/buildWayTV"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    tools:text="Цимлянская ул. 24, стр. 2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="9"
                     android:fontFamily="@font/light_font"
-                    android:textSize="22dp" />
+                    android:gravity="right"
+                    android:paddingVertical="3dp"
+                    android:text="Построить маршрут"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/ratingLL"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/BranchPhotoCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="10dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/branchPhotoIV"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/adressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/light_font"
+                android:textSize="22dp"
+                tools:text="Цимлянская ул. 24, стр. 2" />
+
+            <LinearLayout
+                android:id="@+id/ratingLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <per.wsj.library.AndRatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="3.0"
+                    android:stepSize="0.5"
+                    app:starColor="@color/light_blue"
+                    app:subStarColor="@color/lightGrey" />
+
+                <TextView
+                    android:id="@+id/ratingNumTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/light_font"
+                    android:textSize="20dp"
 
-                    <per.wsj.library.AndRatingBar
-                        android:id="@+id/ratingBar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:isIndicator="true"
-                        app:starColor="@color/light_blue"
-                        app:subStarColor="@color/lightGrey"
-                        android:stepSize="0.5"
-                        android:numStars="5"
-                        android:layout_marginRight="5dp"
-                        android:rating="3.0"
-                        />
+                    tools:text="4.0" />
 
-                    <TextView
-                        android:id="@+id/ratingNumTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        tools:text="4.0"
-                        android:fontFamily="@font/light_font"
+                <TextView
+                    android:id="@+id/marksCountTV"
+                    android:layout_width="wrap_content"
 
-                        android:textSize="20dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/light_font"
+                    android:textSize="17dp"
+                    tools:text="(500)" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/marksCountTV"
-                        android:fontFamily="@font/light_font"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
-                        tools:text="(500)"
-                        android:textSize="17dp" />
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/loadStrokeTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="5dp"
-                    android:text="Загруженность"
+                    android:layout_marginRight="15dp"
                     android:fontFamily="@font/title_font"
-                    android:textSize="22dp"/>
+                    android:text="Загруженность"
+                    android:textSize="22dp" />
 
-                <LinearLayout
-                    android:id="@+id/servicesLL"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/ratingMarkTV"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/servicesStrokeTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="5dp"
-                        android:fontFamily="@font/title_font"
-                        android:text="Услуги"
-                        android:textSize="22dp" />
-
-                    <TextView
-                        android:id="@+id/services1TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:fontFamily="@font/light_font"
-                        android:text="Пополнение баланса мобильного телефона"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services2TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:text="Оплата услуг ЖКХ"
-                        android:fontFamily="@font/light_font"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services3TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:text="Оплата штрафов ГИБДД"
-                        android:fontFamily="@font/light_font"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services4TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:text="Оплата интернет-услуг"
-                        android:fontFamily="@font/light_font"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services5TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:text="Снятие наличных"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services6TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:fontFamily="@font/light_font"
-                        android:text="Погашение задолженностей"
-                        android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/services7TV"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="3dp"
-                        android:text="Пополнение счёта"
-                        android:fontFamily="@font/light_font"
-                        android:textSize="18dp" />
-                </LinearLayout>
+                    android:text="3"
+                    android:textSize="20dp" />
             </LinearLayout>
-        </ScrollView>
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/statisticsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/title_font"
+                android:text="В ближайшее время"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/minRatingMarkTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="3"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/maxRatingMarkTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/servicesLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/servicesStrokeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/title_font"
+                android:text="Услуги"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/services1TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Пополнение баланса мобильного телефона"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services2TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Оплата услуг ЖКХ"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services3TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Оплата штрафов ГИБДД"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services4TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Оплата интернет-услуг"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services5TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:text="Снятие наличных"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services6TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Погашение задолженностей"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/services7TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:fontFamily="@font/light_font"
+                android:text="Пополнение счёта"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+    </FrameLayout>

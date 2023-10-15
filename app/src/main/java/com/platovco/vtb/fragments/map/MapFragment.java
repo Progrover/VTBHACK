@@ -35,6 +35,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.location.LocationServices;
 import com.platovco.vtb.R;
 import com.platovco.vtb.models.ActualRoute;
+import com.platovco.vtb.models.Branch;
 import com.platovco.vtb.models.CustomPoint;
 import com.platovco.vtb.models.MarkBranch;
 import com.platovco.vtb.providers.TextImageProvider;
@@ -397,13 +398,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
 
         mViewModel.marks.observe(getViewLifecycleOwner(), this::drawPointsOnMap);
 
-        getParentFragmentManager().setFragmentResultListener("markKey", getViewLifecycleOwner(), (requestKey, result) -> {
-            MarkBranch mark = (MarkBranch) result.getSerializable("mark");
-            mapView.getMap().move(
-                    new CameraPosition(new Point(mark.getLatitude(), mark.getLongitude()), 18f, 0.0f, 0.0f),
-                    new Animation(Animation.Type.SMOOTH, (float) 0.8),
-                    null);
-        });
+
         mapView.getMap().addCameraListener(listener);
         mViewModel.visibilityOfLoadingLD.observe(getViewLifecycleOwner(), aBoolean -> {
             if (aBoolean)

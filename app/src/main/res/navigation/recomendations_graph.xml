@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_pointListFragment_to_branchFragment"
             app:destination="@id/branchFragment" />
+        <action
+            android:id="@+id/action_pointListFragment_to_mapFragment2"
+            app:destination="@id/mapFragment2" />
     </fragment>
     <fragment
         android:id="@+id/bankomatFragment"
@@ -27,4 +30,9 @@
         android:name="com.platovco.vtb.fragments.branch.BranchFragment"
         android:label="fragment_branch"
         tools:layout="@layout/fragment_branch" />
+    <fragment
+        android:id="@+id/mapFragment2"
+        android:name="com.platovco.vtb.fragments.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

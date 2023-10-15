@@ -37,7 +37,6 @@ public class MapViewModel extends ViewModel implements ConnectionService {
                 bottomLeftPoint.getLongitude());
         var request = buildRequest("branch/find-in-range", requestData);
         runAsync(() -> sendRequest(request, this::onMarksInZoneReceived));
-
     }
 
     private void onMarksInZoneReceived(int code, ResponseBody responseBody) throws IOException {

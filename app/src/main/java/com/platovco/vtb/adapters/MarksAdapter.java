@@ -44,9 +44,9 @@ public class MarksAdapter extends RecyclerView.Adapter<MarksAdapter.ViewHolder> 
         holder.load.setText(String.valueOf(mark.getLoad()));
         holder.itemView.setOnClickListener(v -> {
             Bundle bundle = new Bundle();
-            bundle.putSerializable("mark", mark);
-            fragment.getParentFragmentManager().setFragmentResult("markKey", bundle);
-            Navigation.findNavController(v).navigate(R.id.map_graph);
+            bundle.putDouble("latitude", mark.getX());
+            bundle.putDouble("longitude", mark.getY());
+            Navigation.findNavController(v).navigate(R.id.mapFragment, bundle);
         });
     }
 

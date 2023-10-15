@@ -10,29 +10,23 @@
         android:name="com.platovco.vtb.fragments.pointlist.PointListFragment"
         android:label="fragment_point_list"
         tools:layout="@layout/fragment_point_list" >
-        <action
-            android:id="@+id/action_pointListFragment_to_bankomatFragment"
-            app:destination="@id/bankomatFragment" />
-        <action
-            android:id="@+id/action_pointListFragment_to_branchFragment"
-            app:destination="@id/branchFragment" />
+
         <action
             android:id="@+id/action_pointListFragment_to_mapFragment2"
-            app:destination="@id/mapFragment2" />
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.platovco.vtb.fragments.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_bankomatFragment22"
+            app:destination="@id/bankomatFragment" />
     </fragment>
     <fragment
         android:id="@+id/bankomatFragment"
         android:name="com.platovco.vtb.fragments.bankomat.BankomatFragment"
         android:label="fragment_bankomat"
         tools:layout="@layout/fragment_bankomat" />
-    <fragment
-        android:id="@+id/branchFragment"
-        android:name="com.platovco.vtb.fragments.branch.BranchFragment"
-        android:label="fragment_branch"
-        tools:layout="@layout/fragment_branch" />
-    <fragment
-        android:id="@+id/mapFragment2"
-        android:name="com.platovco.vtb.fragments.map.MapFragment"
-        android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
 </navigation>

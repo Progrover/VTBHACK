@@ -42,37 +42,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="bankomatFragment">
+                  <entry key="bankomatFragment2">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="529" />
-                            <option name="y" value="82" />
+                            <option name="x" value="558" />
+                            <option name="y" value="-303" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="branchFragment">
+                  <entry key="mapFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="368" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="mapFragment2">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="364" />
-                            <option name="y" value="-354" />
+                            <option name="x" value="230" />
+                            <option name="y" value="-278" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -89,12 +77,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_pointListFragment_to_bankomatFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_pointListFragment_to_branchFragment">
+                            <entry key="action_pointListFragment_to_mapFragment2">
                               <value>
                                 <LayoutPositions />
                               </value>

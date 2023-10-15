@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,13 @@ public class BankomatFragment extends Fragment {
         AndRatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView ratingNumTV = view.findViewById(R.id.ratingNumTV);
         TextView marksCountTV = view.findViewById(R.id.marksCountTV);
+        TextView buildWayTV = view.findViewById(R.id.buildWayTV);
+        buildWayTV.setOnClickListener(v -> {
+            Bundle bundle2 = new Bundle();
+            bundle2.putDouble("longitude", markBranch.getLongitude());
+            bundle2.putDouble("latitude", markBranch.getLatitude());
+            Navigation.findNavController(v).navigate(R.id.mapFragment, bundle);
+        });
         adressTV.setText(branch.getAddress());
         double grade = branch.getGrade();
         ratingBar.setRating((float) grade);

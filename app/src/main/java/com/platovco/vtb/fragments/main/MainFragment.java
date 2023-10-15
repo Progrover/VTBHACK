@@ -46,5 +46,15 @@ public class MainFragment extends Fragment {
         NavHostFragment host = (NavHostFragment) getChildFragmentManager().findFragmentById(R.id.host_fragment);
         NavController navController = host.getNavController();
         NavigationUI.setupWithNavController(mainBNV, navController);
+        mainBNV.setOnItemReselectedListener(item -> {
+            if (item.getItemId() == R.id.map_graph) {
+                navController.popBackStack(R.id.mapFragment, false);
+                return;
+            }
+            if (item.getItemId() == R.id.recomendations_graph) {
+                navController.popBackStack(R.id.pointListFragment, false);
+                return;
+            }
+        });
     }
 }

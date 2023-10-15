@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_map" >
         <action
             android:id="@+id/action_mapFragment_to_bankomatFragment2"
-            app:destination="@id/bankomatFragment2" />
+            app:destination="@id/bankomatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/bankomatFragment2"
+        android:id="@+id/bankomatFragment"
         android:name="com.platovco.vtb.fragments.bankomat.BankomatFragment"
         android:label="fragment_bankomat"
         tools:layout="@layout/fragment_bankomat" />

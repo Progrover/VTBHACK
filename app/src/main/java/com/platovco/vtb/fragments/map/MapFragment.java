@@ -110,6 +110,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     LinearLayout selectRouteLL;
     ImageView pedestrianSelectBTN;
     ImageView autoSelectBTN;
+    boolean mapMoved = false;
 
     private ImageView locationBTN;
     final CameraListener listener = new CameraListener() {
@@ -155,7 +156,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     protected synchronized void moveMap(boolean moveToUserLocation) {
-        boolean mapMoved = false;
+        boolean mapMoved = this.mapMoved;
         Random r = new Random();
         float randomLat = -0.0150f + r.nextFloat() * (0.0150f);
         float randomLon = -0.0150f + r.nextFloat() * (0.0150f);
@@ -183,6 +184,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
         if (ActivityCompat.checkSelfPermission(getActivity(),
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             if (isGPSEnabled()) {
+                if (!this.mapMoved){
                 boolean finalMapMoved = mapMoved;
                 if (areGoogleServicesAvailable()) {
                     LocationServices.getFusedLocationProviderClient(requireContext()).getLastLocation()
@@ -261,7 +263,7 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
                         null);
                 mViewModel.visibilityOfLoadingLD.setValue(false);
                 Toast.makeText(getContext(), "Включите геолокацию для лучшей работы приложения", Toast.LENGTH_SHORT).show();
-            }
+            }}
 
         } else {
             requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
@@ -341,14 +343,24 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
     }
 
     private void addPointOnMap(MarkBranch mark) {
-        ImageProvider imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin);
+        ImageProvider imageProvider;
+        if (mark.getBranch().getLoad() >= 4 && mark.getBranch().getLoad() <= 7){
+            imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin_mid);
+        }
+        else if(mark.getBranch().getLoad() >= 0 && mark.getBranch().getLoad() <= 3){
+            imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin_low);
+        }
+        else {
+            imageProvider = ImageProvider.fromResource(requireContext(), R.drawable.map_pin_hard);
+        }
+
         PlacemarkMapObject mapObject = clusterizedCollection.addPlacemark(new Point(mark.getLatitude(), mark.getLongitude()));
         mapObject.setUserData(mark);
         mapObject.setIcon(imageProvider, new IconStyle().setAnchor(
                         new PointF(0.5f, 1f)).
                 setRotationType(RotationType.NO_ROTATION)
                 .setZIndex(0f)
-                .setScale(0.65f));
+                .setScale(0.3f));
         mapObject.addTapListener(MapFragment.this);
     }
 
@@ -394,11 +406,15 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
             if (userLocation != null && mViewModel.destinationPointLD.getValue() != null)
                 buildPedestrianRoute(new Point(userLocation.getLatitude(), userLocation.getLongitude()), mViewModel.destinationPointLD.getValue());
         });
-
-
+        getParentFragmentManager().setFragmentResultListener("markKey", getViewLifecycleOwner(), (requestKey, result) -> {
+            Branch mark = (Branch) result.getSerializable("mark");
+            mapMoved = true;
+            mapView.getMap().move(
+                    new CameraPosition(new Point(mark.getX(), mark.getY()), 18f, 0.0f, 0.0f),
+                    new Animation(Animation.Type.SMOOTH, (float) 0.8),
+                    null);
+        });
         mViewModel.marks.observe(getViewLifecycleOwner(), this::drawPointsOnMap);
-
-
         mapView.getMap().addCameraListener(listener);
         mViewModel.visibilityOfLoadingLD.observe(getViewLifecycleOwner(), aBoolean -> {
             if (aBoolean)
@@ -483,16 +499,13 @@ public class MapFragment extends Fragment implements ClusterListener, MapObjectT
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("mark", mark);
                 dialog.cancel();
-                Navigation.findNavController(getActivity(), R.id.host_fragment).navigate(R.id.action_mapFragment_to_bankomatFragment2, bundle);
+                Navigation.findNavController(requireActivity(), R.id.host_fragment).navigate(R.id.bankomatFragment, bundle);
             });
             routeTV.setOnClickListener(view -> {
                 dialog.cancel();
                 buildPedestrianRoute(new Point(userLocation.getLatitude(), userLocation.getLongitude()), new Point(mark.getLatitude(), mark.getLongitude()));
             });
 
-            if (mark != null) {
-
-            }
             if (getActivity() != null && !getActivity().isFinishing()) {
                 dialog.show();
             }
